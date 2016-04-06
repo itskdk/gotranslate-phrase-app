@@ -1,26 +1,25 @@
-<!--
-GoTranslate Phrase Application for GoTranslate Framework for translating phrases as generated through GoTranslate Phrase Scrapper Component of GoTranslate 
-Framework.
--->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="phraseApp">
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 		<meta charset="UTF-8">			
     	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     	<meta name="viewport" content="width=device-width, initial-scale=1">
-    	<meta http-equiv="Cache-control" content="no-cache">
-    	<meta name="description" content="Free Web tutorials">
+    	<meta http-equiv="Cache-control" content="no-cache">    	
 		<meta name="keywords" content="GoTranslate,Phrase App,Phrase Editor">
+		<meta name="description" content="Demonstrating GoTranslate Phrase App">
 		<meta name="author" content="itskdk">
 		<title>GoTranslate Phrase App</title>
 
 		<!-- Hint: Bootstrap Minified CSS by Bootstrap CDN -->		
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">	
 
-		<!-- Hint: Bootstrap Theme (optional) Minified CSS by Bootstrap CDN -->
+		<!-- Hint: Bootstrap Theme Minified CSS by Bootstrap CDN -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
-		
+
+		<!-- Hint: AngularJS Minified Javascript by Google CDN -->
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.js"></script>
+		<script type="text/javascript" src="js/app.js"></script>		
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 	    <!--[if lt IE 9]>
@@ -28,23 +27,73 @@ Framework.
 	      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	    <![endif]-->
 	</head>
-	<body>
+	<body ng-controller="phraseAppController">
 
 		<nav class="navbar navbar-inverse">
 			<div class="container-fluid">
 				<div class="navbar-header">
-					<a class="navbar-brand" href="#">GoTranslate - Phrase Scrapper Application</a>
+					<a class="navbar-brand" href="#">GoTranslate - Phrase App</a>					
 				</div>				
 			</div>
-		</nav>
+		</nav>	
 
-		<div class="jumbotron">
-		  	<h1>GoTranslate Phrase App</h1>
-		  	<p>GoTranslate Phrase Application for GoTranslate Framework for translating phrases as generated through GoTranslate Phrase Scrapper Component of GoTranslate Framework.</p>
-		  	<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
-		</div>		
-		
-		<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<div class="row">
+
+		</div>
+
+		<div class="container">			
+			<h3>
+				Showcasing Segments of 
+				<small>
+					<a href="{{ url }}" target="_blank" data-toggle="tooltip" data-placement="right" title="Click to visit" style="font-weight:bold;">
+						{{ url }}
+					</a>
+				</small>
+			</h3>
+			<p style="font-weight:bold;">Total Segments: <span class="badge">{{ count }}</span></p>
+						
+			<table id="tblPhrases" class="table table-bordered table-condensed table-striped table-hover display">
+				<thead>
+					<tr>
+						<th>#</th>
+						<th>Text</th>
+						<th>Markup</th>
+						<th>Matches</th>
+						<th>Actions</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="phrase in phrases">
+						<td>{{ phrase.segmentID }}</td>
+						<td>{{ phrase.segmentText }}</td>
+						<td>{{ phrase.segmentMarkup }}</td>
+						<td>{{ phrase.matches }}</td>
+						<td><a href="">Edit</a></td>
+					</tr>
+				</tbody>
+			</table>	
+
+			<footer class="footer">
+	      		<p class="text-muted" style="font-size:xs; padding-left:15px;">
+		            <b>
+		            	Designed, developed and conceptualized by: Kapil Dev Karma</b>, 
+		            	All rights reserved by <b><a href="https://itskdk.github.io/" target="_blank">itskdk.github.io</a>
+		            </b>
+		            <br/>
+		            Powered by <a href="https://www.npmjs.com/package/gotranslate-phrase-scrapper" target="_blank">GoTranslate - Phrase Scrapper</a>
+		        </p>     		
+	    	</footer>
+
+		</div>
+				
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+		<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>		
+
+		<script>
+			$(document).ready(function(){
+				console.log("GoTranslate Phrase App - Initialized Successfully");
+			});
+		</script>
+
 	</body>
 </html>

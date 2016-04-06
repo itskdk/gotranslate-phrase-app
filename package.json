@@ -1,0 +1,24 @@
+{
+  "name": "gotranslate-phrase-app",
+  "version": "1.0.0",
+  "description": "GoTranslate Phrase Application for GoTranslate Framework for translating phrases as generated through GoTranslate Phrase Scrapper Component of GoTranslate Framework.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo 'Error: no test defined' && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itskdk/gotranslate-phrase-app.git"
+  },
+  "keywords": [
+    "GoTranslate",
+    "Phrase",
+    "App"
+  ],
+  "author": "itskdk <kdk.kapildevkarma@gmail.com> (http://itskdk.github.io/)",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/itskdk/gotranslate-phrase-app/issues"
+  },
+  "homepage": "https://github.com/itskdk/gotranslate-phrase-app#readme"
+}
